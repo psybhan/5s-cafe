@@ -22,15 +22,17 @@
     <!-- Header & Navigation -->
     <header class="header animate">
       <div class="container">
+        <!-- Logo as refresh button -->
         <div class="logo">
-          <img src="logo.svg.png.jpg" alt="5S Cafe Logo" />
+          <a href="#" onclick="location.reload(); return false;">
+            <img src="logo.svg.png.jpg" alt="5S Cafe Logo" />
+          </a>
         </div>
         <nav class="nav">
           <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#menu">Menu</a></li>
-            <li><a href="#order-ritual">Order Ritual</a></li>
-            <li><a href="#order-uber">Order Uber</a></li>
+            <li><a href="#order">Order</a></li>
             <li><a href="#reviews">Reviews</a></li>
             <li><a href="#instagram">Instagram</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -44,7 +46,7 @@
       <div class="hero-content">
         <h1>Experience Premium Coffee</h1>
         <p>Welcome to 5S Cafe at 6 Denison Ave, Toronto – where artisanal blends meet modern style.</p>
-        <a href="#order-ritual" class="btn">Order Now</a>
+        <a href="#order" class="btn">Order Now</a>
       </div>
     </section>
 
@@ -53,10 +55,12 @@
       <div class="container">
         <h2>About 5S Cafe</h2>
         <p>
-          5S is a Toronto-based cafe founded by Sahar, with over four years of experience in the industry. Together with her son, Sobhan—a seasoned barista and drink specialist—they bring a passion for artisanal beverages, food, and a welcoming atmosphere that feels like home.
+          5S is a Toronto-based cafe founded by Sahar, with over four years of experience in the industry.
+          Together with her son, Sobhan—a seasoned barista and drink specialist—they bring a passion for artisanal beverages, food, and a welcoming atmosphere that feels like home.
         </p>
         <p>
-          Our unique menu features specialty coffee drinks, fresh pastries, baked goods, customized birthday cakes, coffee beans, homemade products, arts for retail, and event hosting. Operating from <strong>7 am to 7 pm</strong>, we’re located in a prime spot in the heart of Toronto.
+          Our unique menu features specialty coffee drinks, fresh pastries, baked goods, customized birthday cakes, coffee beans, homemade products, arts for retail, and event hosting.
+          Operating from <strong>7 am to 7 pm</strong>, we’re located in a prime spot in the heart of Toronto.
         </p>
       </div>
     </section>
@@ -95,21 +99,15 @@
       </div>
     </section>
 
-    <!-- Order via Ritual Section -->
-    <section id="order-ritual" class="order animate">
+    <!-- Merged Order Section -->
+    <section id="order" class="order animate">
       <div class="container">
-        <h2>Order via Ritual</h2>
-        <p>Order your favorite coffee, pastries, and more for pickup through Ritual.</p>
-        <a href="https://ritual.co/place/order/5s-cafe-denison-n-queen-r-ryerson-toronto/b04a?checkoutLogin=false&hideDownloadApp=true&rwg_token=AAiGsoYs5BckvtdRBOQJ_gSKPOxiPanrRHzg-qag4m3RzlYBr3IIWeqlETdwvUNQcpnGrnXNDOlU_MHV1RPBhHAM96e2fLLbg%3D%3D" class="btn" target="_blank" rel="noopener noreferrer">Order via Ritual</a>
-      </div>
-    </section>
-
-    <!-- Order via Uber Section -->
-    <section id="order-uber" class="order animate">
-      <div class="container">
-        <h2>Order via Uber</h2>
-        <p>Order online for pickup or delivery with Uber Eats.</p>
-        <a href="https://www.order.store/ca/store/5s-cafe/YsRSNEVWSNiAq9qjEexN0g" class="btn" target="_blank" rel="noopener noreferrer">Order via Uber Eats</a>
+        <h2>Order</h2>
+        <p>Order your favorite coffee, pastries, and more for pickup or delivery.</p>
+        <div class="order-buttons">
+          <a href="https://ritual.co/place/order/5s-cafe-denison-n-queen-r-ryerson-toronto/b04a?checkoutLogin=false&hideDownloadApp=true&rwg_token=AAiGsoYs5BckvtdRBOQJ_gSKPOxiPanrRHzg-qag4m3RzlYBr3IIWeqlETdwvUNQcpnGrnXNDOlU_MHV1RPBhHAM96e2fLLbg%3D%3D" class="btn" target="_blank" rel="noopener noreferrer">Order via Ritual</a>
+          <a href="https://www.order.store/ca/store/5s-cafe/YsRSNEVWSNiAq9qjEexN0g" class="btn" target="_blank" rel="noopener noreferrer">Order via Uber Eats</a>
+        </div>
       </div>
     </section>
 
@@ -136,11 +134,17 @@
       <div class="container">
         <h2>Contact Us</h2>
         <p>Have questions or feedback? Get in touch!</p>
-        <form id="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
+        <!-- Updated Formspree Form -->
+        <form action="https://formspree.io/f/xdkarweq" method="POST">
+          <label>
+            Your email:
+            <input type="email" name="email" placeholder="Your Email" required>
+          </label>
+          <label>
+            Your message:
+            <textarea name="message" placeholder="Your Message" required></textarea>
+          </label>
+          <button type="submit" class="btn">Send</button>
         </form>
         <div class="contact-info">
           <p><strong>Address:</strong> 6 Denison Ave, Toronto, ON, Canada</p>
