@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("in-view");
-        // Unobserve element after animation triggers once
+        // Unobserve element after it animates once
         obs.unobserve(entry.target);
       }
     });
