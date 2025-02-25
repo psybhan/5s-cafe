@@ -1,156 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Artisanal coffee &amp; fresh pastries | Order online, earn rewards, and join our sustainable coffee journey">
-  <title>Cafe Name - Specialty Coffee &amp; Café Experience</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="5S Cafe offers a premium coffee experience at 6 Denison Ave, Toronto. Enjoy artisanal blends, freshly baked pastries, and modern ambiance." />
+  <title>5S Cafe - Premium Coffee Experience</title>
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header Section -->
-  <header class="hero">
-    <nav aria-label="Main Navigation">
-      <div class="brand-logo">
-        <img src="logo.svg" alt="Cafe Name Logo">
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="logo.svg.png" alt="5S Cafe Logo" />
       </div>
-      <ul class="nav-links">
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#order">Order</a></li>
-        <li><a href="#reserve">Reserve</a></li>
-        <li><a href="#rewards">Rewards</a></li>
-      </ul>
-    </nav>
-    <div class="hero-content">
-      <h1>Third-Wave Coffee,<br>First-Class Taste</h1>
-      <a href="#order" class="cta-order">Order Now →</a>
+      <nav class="nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#order">Order</a></li>
+          <li><a href="#reserve">Reserve</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Highlights Section -->
-    <section class="highlights" aria-label="Highlights">
-      <div class="highlight-card">
-        <img src="coffee-beans-icon.svg" alt="Fresh Roasts Icon">
-        <h3>Daily Fresh Roasts</h3>
-        <p>Small-batch beans from sustainable farms</p>
-      </div>
-      <div class="highlight-card">
-        <img src="clock-icon.svg" alt="Fast Service Icon">
-        <h3>Skip the Line</h3>
-        <p>Pre-order via app for instant pickup</p>
-      </div>
-      <div class="highlight-card">
-        <img src="leaf-icon.svg" alt="Eco-Friendly Icon">
-        <h3>Eco-Conscious</h3>
-        <p>100% compostable packaging</p>
-      </div>
-    </section>
-
-    <!-- Dynamic Menu Section -->
-    <section id="menu" class="menu-section">
-      <h2>Our Artisanal Offerings</h2>
-      <div class="menu-filter">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="coffee">Coffee</button>
-        <button class="filter-btn" data-category="food">Food</button>
-        <button class="filter-btn" data-category="seasonal">Seasonal</button>
-      </div>
-      <div class="menu-grid">
-        <!-- Dynamically populated content -->
-      </div>
-    </section>
-
-    <!-- Integrated Ordering System -->
-    <section id="order" class="order-section">
-      <div class="order-flow">
-        <h2>How to Order</h2>
-        <div class="step">
-          <span>1</span>
-          <h4>Choose Your Fix</h4>
-          <p>Browse real-time menu updates</p>
-        </div>
-        <div class="step">
-          <span>2</span>
-          <h4>Customize</h4>
-          <p>Select milk alternatives, toppings, etc.</p>
-        </div>
-        <div class="step">
-          <span>3</span>
-          <h4>Checkout Securely</h4>
-          <p>Apple Pay/Google Pay enabled</p>
-        </div>
-      </div>
-      <div class="order-preview">
-        <!-- Interactive order builder component -->
-      </div>
-    </section>
-
-    <!-- Loyalty Program Section -->
-    <section id="rewards" class="loyalty-section">
-      <h2>Perks Program</h2>
-      <div class="loyalty-tier">
-        <h3>☕ Java Fan (0-50 pts)</h3>
-        <p>Earn 2 pts per $1 spent</p>
-      </div>
-      <div class="loyalty-tier">
-        <h3>🎯 Brew Master (51-200 pts)</h3>
-        <p>Free pastry + birthday reward</p>
-      </div>
-      <div class="loyalty-tier">
-        <h3>🚀 Coffee Guru (201+ pts)</h3>
-        <p>Exclusive tastings + 25% discounts</p>
-      </div>
-      <a href="#" class="cta-rewards">Join Free →</a>
-    </section>
-
-    <!-- Reservation Widget -->
-    <section id="reserve" class="reservation-section">
-      <h2>Book Your Experience</h2>
-      <div class="reservation-widget">
-        <form id="booking-form">
-          <label for="res-date">Date:</label>
-          <input type="date" id="res-date" name="res-date" required>
-          <label for="party-size">Party Size:</label>
-          <select id="party-size" name="party-size">
-            <option value="2">2 people</option>
-            <option value="4">4 people</option>
-            <option value="6+">6+ people</option>
-          </select>
-          <button type="submit">Check Availability</button>
-        </form>
-        <div class="booking-notes">
-          <p>📱 Receive SMS reminders<br>🕒 90-minute slots during peak hours</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer & Legal -->
-  <footer>
-    <div class="social-links" aria-label="Social Media">
-      <a href="#instagram">Instagram</a>
-      <a href="#tiktok">TikTok</a>
-      <a href="#contact">Contact</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Experience Premium Coffee</h1>
+      <p>Welcome to 5S Cafe at 6 Denison Ave, Toronto – where artisanal blends meet modern style.</p>
+      <a href="#order" class="btn">Order Now</a>
     </div>
-    <div class="newsletter">
-      <input type="email" placeholder="Get weekly specials..." aria-label="Email for weekly specials">
-      <button>Subscribe</button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About 5S Cafe</h2>
+      <p>
+        Located at <strong>6 Denison Ave, Toronto, ON, Canada</strong>, 5S Cafe combines traditional coffee craftsmanship with a sleek, modern design.
+        Our beans are ethically sourced and roasted to perfection, ensuring every cup delivers a premium experience.
+      </p>
+      <p>
+        Visit us for a cozy ambiance, or order online to enjoy our exclusive blends and freshly baked pastries.
+      </p>
     </div>
-    <p>© 2024 Cafe Name | Sustainability Report | Accessibility</p>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu">
+    <div class="container">
+      <h2>Our Menu</h2>
+      <div class="menu-items">
+        <div class="menu-item">
+          <img src="images/espresso.jpg" alt="Espresso" />
+          <h3>Espresso</h3>
+          <p>Rich, bold, and freshly brewed.</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/latte.jpg" alt="Latte" />
+          <h3>Latte</h3>
+          <p>Smooth blend of espresso and steamed milk, topped with latte art.</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/cappuccino.jpg" alt="Cappuccino" />
+          <h3>Cappuccino</h3>
+          <p>Classic balance of foam and espresso.</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/coldbrew.jpg" alt="Cold Brew" />
+          <h3>Cold Brew</h3>
+          <p>Refreshing, slow-steeped coffee served chilled.</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/pastries.jpg" alt="Pastries" />
+          <h3>Pastries</h3>
+          <p>Freshly baked treats to complement your coffee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Section -->
+  <section id="order" class="order">
+    <div class="container">
+      <h2>Online Order</h2>
+      <p>Order your favorite coffee and pastries online for pick-up or delivery.</p>
+      <!-- Replace the link below with your actual online order system URL -->
+      <a href="https://order-link.com" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <!-- Reservation Section -->
+  <section id="reserve" class="reserve">
+    <div class="container">
+      <h2>Reserve Your Table</h2>
+      <p>Book a table at our Toronto location and enjoy the ambiance at 5S Cafe.</p>
+      <form id="reservation-form">
+        <input type="date" name="date" required />
+        <select name="time" required>
+          <option value="">Select Time</option>
+          <option value="12:00">12:00 PM</option>
+          <option value="13:00">1:00 PM</option>
+          <option value="14:00">2:00 PM</option>
+          <!-- Add additional time slots as needed -->
+        </select>
+        <input type="number" name="people" placeholder="Number of People" min="1" required />
+        <button type="submit" class="btn">Reserve Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Reviews Section (Google Reviews Integration) -->
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <h2>Google Reviews</h2>
+      <div id="google-reviews-widget">
+        <!-- Google Reviews Widget Integration: Replace with your actual widget code -->
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <div class="elfsight-app-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have questions or feedback? Get in touch!</p>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <p><strong>Address:</strong> 6 Denison Ave, Toronto, ON, Canada</p>
+        <p><strong>Phone:</strong> (416) 123-4567</p>
+      </div>
+      <div class="social-links">
+        <a href="https://instagram.com/5scafe" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://facebook.com/5scafeToronto" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://twitter.com/5scafe" target="_blank" rel="noopener noreferrer">Twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="social">
+        <a href="https://instagram.com/5scafe" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://facebook.com/5scafeToronto" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://twitter.com/5scafe" target="_blank" rel="noopener noreferrer">Twitter</a>
+      </div>
+      <p>&copy; 2024 5S Cafe. All Rights Reserved.</p>
+    </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- JavaScript -->
   <script src="app.js"></script>
-  <!-- Third-Party Integrations -->
-  <script src="https://squareup.com/ordering-system"></script>
-  <script src="https://opentable.com/widget-loader"></script>
 </body>
 </html>
-<img src="logo.svg.png" alt="5s-cafe Logo">
-
-
