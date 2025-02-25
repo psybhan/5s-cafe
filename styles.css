@@ -1,31 +1,354 @@
-// JavaScript for scroll-triggered text animations using IntersectionObserver
-document.addEventListener("DOMContentLoaded", function() {
-  const observerOptions = {
-    threshold: 0.1
-  };
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-        // Unobserve after animation triggers once
-        obs.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
 
-  // Observe all elements with the class "animate"
-  const animateElements = document.querySelectorAll('.animate');
-  animateElements.forEach(el => observer.observe(el));
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
 
-  // Splash Screen
-  setTimeout(function(){
-    const splash = document.getElementById("splash");
-    splash.style.transition = "opacity 0.5s ease";
-    splash.style.opacity = "0";
-    setTimeout(function(){
-      splash.style.display = "none";
-      document.getElementById("main-content").style.display = "block";
-    }, 500);
-  }, 3000);
-});
+/* Splash Screen Styles */
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.logo-animation {
+  width: 200px;
+  animation: logoAnimation 2.5s ease forwards;
+}
+
+@keyframes logoAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Rolex-style Text Animation (triggered on scroll) */
+@keyframes rolexText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    letter-spacing: -2px;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: normal;
+  }
+}
+
+/* Animate elements (initial state) */
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  letter-spacing: -2px;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, letter-spacing 0.6s ease-out;
+}
+
+/* When in view, trigger the Rolex-style animation */
+.animate.in-view {
+  animation: rolexText 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Horizontally Scrollable Navigation */
+.nav ul {
+  list-style: none;
+  display: inline-flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav li {
+  margin-left: 30px;
+  display: inline-block;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ff6600;
+}
+
+/* Specific styling for Find Us button */
+.find-us {
+  background: #fff;
+  border: 2px solid #ff6600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.find-us:hover {
+  background: #ff6600;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('images/hero-bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding-top: 80px; /* Offset for fixed header */
+}
+
+.hero-content {
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff6600;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background: #e65c00;
+  transform: translateY(-3px);
+}
+
+/* Sections */
+section {
+  padding: 80px 0;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* About Section */
+.about p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Menu Section */
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.menu-item {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item img:hover {
+  transform: scale(1.05);
+}
+
+.menu-item h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+/* Order, Reviews, Instagram & Contact Sections */
+.order, .reviews, .instagram-feed, .contact {
+  text-align: center;
+}
+
+.order p, .reviews p, .contact p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* Order Buttons */
+.order-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Reviews Widget Container */
+#google-reviews-widget {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Forms */
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #ff6600;
+}
+
+form button {
+  padding: 15px;
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+  background: #e65c00;
+  transform: translateY(-3px);
+}
+
+/* Contact Info & Social Links */
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ff6600;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #e65c00;
+}
+
+/* Footer */
+.footer {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.footer .social a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.footer p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
