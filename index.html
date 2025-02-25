@@ -12,159 +12,181 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header & Navigation -->
-  <header class="header animate">
-    <div class="container">
-      <div class="logo">
-        <img src="logo.svg.png" alt="5S Cafe Logo" />
-      </div>
-      <nav class="nav">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#order-ritual">Order Ritual</a></li>
-          <li><a href="#order-uber">Order Uber</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#instagram">Instagram</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <!-- Splash Screen (Intro Logo Animation) -->
+  <div id="splash">
+    <img src="logo.svg.png" alt="5S Cafe Logo" class="logo-animation" />
+  </div>
 
-  <!-- Hero Section -->
-  <section class="hero animate">
-    <div class="hero-content">
-      <h1>Experience Premium Coffee</h1>
-      <p>Welcome to 5S Cafe at 6 Denison Ave, Toronto – where artisanal blends meet modern style.</p>
-      <a href="#order-ritual" class="btn">Order Now</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about animate">
-    <div class="container">
-      <h2>About 5S Cafe</h2>
-      <p>
-        5S is a Toronto-based cafe founded by Sahar, with over four years of experience in the industry. Together with her son, Sobhan—a seasoned barista and drink specialist—they bring a passion for artisanal beverages, food, and a welcoming atmosphere that feels like home.
-      </p>
-      <p>
-        Our unique menu features specialty coffee drinks, fresh pastries, baked goods, customized birthday cakes, coffee beans, homemade products, arts for retail, and event hosting. Operating from <strong>7 am to 7 pm</strong>, we’re located in a prime spot in the heart of Toronto.
-      </p>
-    </div>
-  </section>
-
-  <!-- Menu Section -->
-  <section id="menu" class="menu animate">
-    <div class="container">
-      <h2>Our Menu</h2>
-      <div class="menu-items">
-        <div class="menu-item animate">
-          <img src="images/espresso.jpg" alt="Espresso" />
-          <h3>Espresso</h3>
-          <p>Rich, bold, and freshly brewed.</p>
+  <!-- Main Content (Hidden initially) -->
+  <div id="main-content" style="display: none;">
+    <!-- Header & Navigation -->
+    <header class="header animate">
+      <div class="container">
+        <div class="logo">
+          <img src="logo.svg.png" alt="5S Cafe Logo" />
         </div>
-        <div class="menu-item animate">
-          <img src="images/latte.jpg" alt="Latte" />
-          <h3>Latte</h3>
-          <p>Smooth blend of espresso and steamed milk, topped with latte art.</p>
+        <nav class="nav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#order-ritual">Order Ritual</a></li>
+            <li><a href="#order-uber">Order Uber</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#instagram">Instagram</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero animate">
+      <div class="hero-content">
+        <h1>Experience Premium Coffee</h1>
+        <p>Welcome to 5S Cafe at 6 Denison Ave, Toronto – where artisanal blends meet modern style.</p>
+        <a href="#order-ritual" class="btn">Order Now</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about animate">
+      <div class="container">
+        <h2>About 5S Cafe</h2>
+        <p>
+          5S is a Toronto-based cafe founded by Sahar, with over four years of experience in the industry. Together with her son, Sobhan—a seasoned barista and drink specialist—they bring a passion for artisanal beverages, food, and a welcoming atmosphere that feels like home.
+        </p>
+        <p>
+          Our unique menu features specialty coffee drinks, fresh pastries, baked goods, customized birthday cakes, coffee beans, homemade products, arts for retail, and event hosting. Operating from <strong>7 am to 7 pm</strong>, we’re located in a prime spot in the heart of Toronto.
+        </p>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu animate">
+      <div class="container">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+          <div class="menu-item animate">
+            <img src="images/espresso.jpg" alt="Espresso" />
+            <h3>Espresso</h3>
+            <p>Rich, bold, and freshly brewed.</p>
+          </div>
+          <div class="menu-item animate">
+            <img src="images/latte.jpg" alt="Latte" />
+            <h3>Latte</h3>
+            <p>Smooth blend of espresso and steamed milk, topped with latte art.</p>
+          </div>
+          <div class="menu-item animate">
+            <img src="images/cappuccino.jpg" alt="Cappuccino" />
+            <h3>Cappuccino</h3>
+            <p>Classic balance of foam and espresso.</p>
+          </div>
+          <div class="menu-item animate">
+            <img src="images/coldbrew.jpg" alt="Cold Brew" />
+            <h3>Cold Brew</h3>
+            <p>Refreshing, slow-steeped coffee served chilled.</p>
+          </div>
+          <div class="menu-item animate">
+            <img src="images/pastries.jpg" alt="Pastries & More" />
+            <h3>Pastries & More</h3>
+            <p>Freshly baked treats, birthday cakes, coffee beans, and homemade delights.</p>
+          </div>
         </div>
-        <div class="menu-item animate">
-          <img src="images/cappuccino.jpg" alt="Cappuccino" />
-          <h3>Cappuccino</h3>
-          <p>Classic balance of foam and espresso.</p>
+      </div>
+    </section>
+
+    <!-- Order via Ritual Section -->
+    <section id="order-ritual" class="order animate">
+      <div class="container">
+        <h2>Order via Ritual</h2>
+        <p>Order your favorite coffee, pastries, and more for pickup through Ritual.</p>
+        <a href="https://ritual.co/place/order/5s-cafe-denison-n-queen-r-ryerson-toronto/b04a?checkoutLogin=false&hideDownloadApp=true&rwg_token=AAiGsoYs5BckvtdRBOQJ_gSKPOxiPanrRHzg-qag4m3RzlYBr3IIWeqlETdwvUNQcpnGrnXNDOlU_MHV1RPBhHAM96e2fLLbg%3D%3D" class="btn" target="_blank" rel="noopener noreferrer">Order via Ritual</a>
+      </div>
+    </section>
+
+    <!-- Order via Uber Section -->
+    <section id="order-uber" class="order animate">
+      <div class="container">
+        <h2>Order via Uber</h2>
+        <p>Order online for pickup or delivery with Uber Eats.</p>
+        <a href="https://www.order.store/ca/store/5s-cafe/YsRSNEVWSNiAq9qjEexN0g" class="btn" target="_blank" rel="noopener noreferrer">Order via Uber Eats</a>
+      </div>
+    </section>
+
+    <!-- Reviews Section (Elfsight Google Reviews Integration) -->
+    <section id="reviews" class="reviews animate">
+      <div class="container">
+        <h2>Google Reviews</h2>
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-593a6129-8654-4cbb-a2eb-f313dfd491d4" data-elfsight-app-lazy></div>
+      </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section id="instagram" class="instagram-feed animate">
+      <div class="container">
+        <h2>Follow Us on Instagram</h2>
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-c2098f31-1c72-47e4-ad2f-8887401ae12a" data-elfsight-app-lazy></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact animate">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Have questions or feedback? Get in touch!</p>
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <p><strong>Address:</strong> 6 Denison Ave, Toronto, ON, Canada</p>
+          <p><strong>Phone:</strong> 6475518993</p>
+          <p><strong>Email:</strong> <a href="mailto:5s.cafe.6d@gmail.com">5s.cafe.6d@gmail.com</a></p>
         </div>
-        <div class="menu-item animate">
-          <img src="images/coldbrew.jpg" alt="Cold Brew" />
-          <h3>Cold Brew</h3>
-          <p>Refreshing, slow-steeped coffee served chilled.</p>
+        <div class="social-links">
+          <a href="https://instagram.com/5scafe" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://facebook.com/5scafeToronto" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://twitter.com/5scafe" target="_blank" rel="noopener noreferrer">Twitter</a>
         </div>
-        <div class="menu-item animate">
-          <img src="images/pastries.jpg" alt="Pastries & More" />
-          <h3>Pastries & More</h3>
-          <p>Freshly baked treats, birthday cakes, coffee beans, and homemade delights.</p>
+        <div class="map-button">
+          <a href="https://g.co/kgs/cQdWVAG" target="_blank" rel="noopener noreferrer" class="btn">View on Google Maps</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Order via Ritual Section -->
-  <section id="order-ritual" class="order animate">
-    <div class="container">
-      <h2>Order via Ritual</h2>
-      <p>Order your favorite coffee, pastries, and more for pickup through Ritual.</p>
-      <a href="https://ritual.co/place/order/5s-cafe-denison-n-queen-r-ryerson-toronto/b04a?checkoutLogin=false&hideDownloadApp=true&rwg_token=AAiGsoYs5BckvtdRBOQJ_gSKPOxiPanrRHzg-qag4m3RzlYBr3IIWeqlETdwvUNQcpnGrnXNDOlU_MHV1RPBhHAM96e2fLLbg%3D%3D" class="btn" target="_blank" rel="noopener noreferrer">Order via Ritual</a>
-    </div>
-  </section>
-
-  <!-- Order via Uber Section -->
-  <section id="order-uber" class="order animate">
-    <div class="container">
-      <h2>Order via Uber</h2>
-      <p>Order online for pickup or delivery with Uber Eats.</p>
-      <a href="https://www.order.store/ca/store/5s-cafe/YsRSNEVWSNiAq9qjEexN0g" class="btn" target="_blank" rel="noopener noreferrer">Order via Uber Eats</a>
-    </div>
-  </section>
-
-  <!-- Reviews Section (Elfsight Google Reviews Integration) -->
-  <section id="reviews" class="reviews animate">
-    <div class="container">
-      <h2>Google Reviews</h2>
-      <!-- Elfsight Google Reviews Widget -->
-      <script src="https://static.elfsight.com/platform/platform.js" async></script>
-      <div class="elfsight-app-593a6129-8654-4cbb-a2eb-f313dfd491d4" data-elfsight-app-lazy></div>
-    </div>
-  </section>
-
-  <!-- Instagram Feed Section -->
-  <section id="instagram" class="instagram-feed animate">
-    <div class="container">
-      <h2>Follow Us on Instagram</h2>
-      <!-- Elfsight Instagram Feed -->
-      <script src="https://static.elfsight.com/platform/platform.js" async></script>
-      <div class="elfsight-app-c2098f31-1c72-47e4-ad2f-8887401ae12a" data-elfsight-app-lazy></div>
-    </div>
-  </section>
-
-  <!-- Contact Section (At the Bottom) -->
-  <section id="contact" class="contact animate">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Have questions or feedback? Get in touch!</p>
-      <form id="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-      <div class="contact-info">
-        <p><strong>Address:</strong> 6 Denison Ave, Toronto, ON, Canada</p>
-        <p><strong>Phone:</strong> 6475518993</p>
+    <!-- Footer -->
+    <footer class="footer animate">
+      <div class="container">
+        <div class="social">
+          <a href="https://instagram.com/5scafe" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://facebook.com/5scafeToronto" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://twitter.com/5scafe" target="_blank" rel="noopener noreferrer">Twitter</a>
+        </div>
+        <p>&copy; 2024 5S Cafe. All Rights Reserved.</p>
       </div>
-      <div class="social-links">
-        <a href="https://instagram.com/5scafe" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://facebook.com/5scafeToronto" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://twitter.com/5scafe" target="_blank" rel="noopener noreferrer">Twitter</a>
-      </div>
-      <div class="map-button">
-        <a href="https://g.co/kgs/cQdWVAG" target="_blank" rel="noopener noreferrer" class="btn">View on Google Maps</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer animate">
-    <div class="container">
-      <div class="social">
-        <a href="https://instagram.com/5scafe" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://facebook.com/5scafeToronto" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://twitter.com/5scafe" target="_blank" rel="noopener noreferrer">Twitter</a>
-      </div>
-      <p>&copy; 2024 5S Cafe. All Rights Reserved.</p>
-    </div>
-  </footer>
-
+    </footer>
+  </div>
+  
   <!-- JavaScript -->
   <script src="app.js"></script>
+  <!-- Splash Screen Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Show splash for 3 seconds then fade out
+      setTimeout(function(){
+        const splash = document.getElementById("splash");
+        splash.style.transition = "opacity 0.5s ease";
+        splash.style.opacity = "0";
+        setTimeout(function(){
+          splash.style.display = "none";
+          document.getElementById("main-content").style.display = "block";
+        }, 500);
+      }, 3000);
+    });
+  </script>
 </body>
 </html>
