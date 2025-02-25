@@ -55,7 +55,7 @@ body {
   }
 }
 
-/* Rolex-style Text Animation (triggered on scroll) */
+/* Rolex-style Text Animation */
 @keyframes rolexText {
   0% {
     opacity: 0;
@@ -69,7 +69,7 @@ body {
   }
 }
 
-/* Animate elements (initial state) */
+/* Animate elements initially */
 .animate {
   opacity: 0;
   transform: translateY(20px);
@@ -77,7 +77,7 @@ body {
   transition: opacity 0.6s ease-out, transform 0.6s ease-out, letter-spacing 0.6s ease-out;
 }
 
-/* When in view, trigger the Rolex-style animation */
+/* When in view, trigger the text animation */
 .animate.in-view {
   animation: rolexText 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
@@ -133,7 +133,7 @@ body {
   color: #ff6600;
 }
 
-/* Specific styling for Find Us button */
+/* Find Us Button */
 .find-us {
   background: #fff;
   border: 2px solid #ff6600;
@@ -157,7 +157,7 @@ body {
   justify-content: center;
   text-align: center;
   color: #fff;
-  padding-top: 80px; /* Offset for fixed header */
+  padding-top: 80px;
 }
 
 .hero-content {
@@ -176,6 +176,7 @@ body {
   margin-bottom: 30px;
 }
 
+/* Basic Button Styling */
 .btn {
   display: inline-block;
   background: #ff6600;
