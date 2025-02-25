@@ -19,6 +19,22 @@ body {
   margin: auto;
 }
 
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate {
+  animation: fadeInUp 1s ease-out both;
+}
+
 /* Header */
 .header {
   position: fixed;
@@ -38,6 +54,11 @@ body {
 
 .logo img {
   height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
 }
 
 .nav ul {
@@ -94,11 +115,12 @@ body {
   text-decoration: none;
   font-weight: 500;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
   background: #e65c00;
+  transform: translateY(-3px);
 }
 
 /* Sections */
@@ -130,6 +152,11 @@ section h2 {
 
 .menu-item {
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
 }
 
 .menu-item img {
@@ -148,12 +175,12 @@ section h2 {
   font-size: 1.5rem;
 }
 
-/* Order, Reserve, Contact & Reviews Sections */
-.order, .reserve, .contact, .reviews {
+/* Order, Contact, Reviews & Instagram Sections */
+.order, .contact, .reviews, .instagram-feed {
   text-align: center;
 }
 
-.order p, .reserve p, .contact p, .reviews p {
+.order p, .contact p, .reviews p {
   margin-bottom: 20px;
   font-size: 1.1rem;
 }
@@ -180,6 +207,13 @@ form textarea {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #ff6600;
 }
 
 form button {
@@ -190,11 +224,12 @@ form button {
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 form button:hover {
   background: #e65c00;
+  transform: translateY(-3px);
 }
 
 /* Contact Info & Social Links */
