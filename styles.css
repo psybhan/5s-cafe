@@ -55,7 +55,7 @@ body {
   }
 }
 
-/* Text Animation (Rolex-style) */
+/* Rolex-style Text Animation (triggered on scroll) */
 @keyframes rolexText {
   0% {
     opacity: 0;
@@ -69,13 +69,15 @@ body {
   }
 }
 
+/* Animate elements (initial state) */
 .animate {
   opacity: 0;
   transform: translateY(20px);
   letter-spacing: -2px;
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, letter-spacing 0.6s ease-out;
 }
 
+/* When in view, trigger the Rolex-style animation */
 .animate.in-view {
   animation: rolexText 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
