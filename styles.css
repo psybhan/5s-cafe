@@ -103,24 +103,90 @@ body {
 
 .header .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-/* Brand Title in Header using Playfair Display */
+/* Brand Title: Big centered text using Playfair Display */
+.brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .brand-link {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #333;
   text-decoration: none;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.brand-link:hover {
-  opacity: 0.8;
+.brand-link.in-view {
+  animation: gucciText 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* Horizontally Scrollable Navigation */
+/* Menu Button (Hamburger) on Top Right */
+.menu-btn {
+  position: absolute;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  z-index: 1100;
+  transition: color 0.3s ease;
+}
+
+.menu-btn:hover {
+  color: #ff6600;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  transition: right 0.3s ease;
+  z-index: 1200;
+  padding: 20px;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.close-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.sidebar-nav a {
+  display: block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+  color: #ff6600;
+}
+
+/* Horizontally Scrollable Navigation (if needed elsewhere) */
 .nav ul {
   list-style: none;
   display: inline-flex;
