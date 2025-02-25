@@ -1,19 +1,31 @@
-// JavaScript for triggering glitter effect on buttons (except refresh logo)
+// JavaScript for scroll-triggered text animations using IntersectionObserver
 document.addEventListener("DOMContentLoaded", function() {
-  // Select all buttons with class 'btn' that are not inside the .logo element
-  const buttons = document.querySelectorAll("a.btn:not(.logo a)");
-  
-  buttons.forEach(btn => {
-    btn.addEventListener("click", function() {
-      // Remove glitter class if already present to restart animation
-      btn.classList.remove("glitter");
-      // Trigger reflow to restart animation
-      void btn.offsetWidth;
-      btn.classList.add("glitter");
-      // Remove glitter class after animation completes (800ms)
-      setTimeout(() => {
-        btn.classList.remove("glitter");
-      }, 800);
+  const observerOptions = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+      } else {
+        entry.target.classList.remove("in-view");
+      }
     });
-  });
+  }, observerOptions);
+
+  // Observe all elements with the class "animate"
+  const animateElements = document.querySelectorAll('.animate');
+  animateElements.forEach(el => observer.observe(el));
+
+  // Splash Screen
+  setTimeout(function(){
+    const splash = document.getElementById("splash");
+    splash.style.transition = "opacity 0.5s ease";
+    splash.style.opacity = "0";
+    setTimeout(function(){
+      splash.style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+    }, 500);
+  }, 3000);
 });
