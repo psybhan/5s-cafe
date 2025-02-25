@@ -1,0 +1,120 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header Styles */
+header.hero {
+  background: url('hero-bg.jpg') no-repeat center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Call-to-Action Buttons */
+.cta-order,
+.cta-rewards,
+button {
+  background-color: #ff6600;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-order:hover,
+.cta-rewards:hover,
+button:hover {
+  background-color: #e65c00;
+}
+
+/* Section Styles */
+section {
+  padding: 60px 20px;
+}
+
+/* Highlights */
+.highlights {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #f9f9f9;
+}
+
+.highlight-card {
+  text-align: center;
+  max-width: 300px;
+  margin: 20px;
+}
+
+.highlight-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+/* Reservation Section */
+.reservation-widget form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: auto;
+}
+
+.reservation-widget label {
+  margin: 10px 0 5px;
+}
+
+.reservation-widget input,
+.reservation-widget select {
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+}
