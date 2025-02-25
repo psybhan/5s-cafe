@@ -8,15 +8,14 @@ document.addEventListener("DOMContentLoaded", function() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("in-view");
-        // Unobserve after animation triggers once
+        // Unobserve element after animation triggers once
         obs.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  // Observe all elements with the class "animate"
-  const animateElements = document.querySelectorAll('.animate');
-  animateElements.forEach(el => observer.observe(el));
+  // Observe all elements with class "animate"
+  document.querySelectorAll('.animate').forEach(el => observer.observe(el));
 
   // Splash Screen
   setTimeout(function(){
