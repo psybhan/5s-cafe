@@ -107,13 +107,17 @@ body {
   align-items: center;
 }
 
-.logo img {
-  height: 40px;
-  transition: transform 0.3s ease;
+/* Brand Title in Header using Playfair Display */
+.brand-link {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #333;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 
-.logo img:hover {
-  transform: scale(1.1);
+.brand-link:hover {
+  opacity: 0.8;
 }
 
 /* Horizontally Scrollable Navigation */
