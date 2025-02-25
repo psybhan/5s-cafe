@@ -55,7 +55,7 @@ body {
   }
 }
 
-/* Sparkle Animation */
+/* Sparkle Animation for Hero Section */
 .sparkles {
   position: absolute;
   top: 0;
@@ -131,7 +131,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Make nav scrollable horizontally */
+/* Horizontally Scrollable Navigation */
 .nav ul {
   list-style: none;
   display: inline-flex;
@@ -168,6 +168,28 @@ body {
 .find-us:hover {
   background: #ff6600;
   color: #fff;
+}
+
+/* Sparkle Effect for Buttons */
+.btn.sparkle {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn.sparkle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+}
+
+.btn.sparkle:hover::before {
+  left: 100%;
 }
 
 /* Hero Section */
@@ -373,41 +395,4 @@ form button:hover {
   margin-top: 20px;
   font-size: 0.9rem;
   color: #666;
-}
-.btn.sparkle-effect {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn.sparkle-effect::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -50%;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
-  transform: translateY(-50%) rotate(45deg);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.btn.sparkle-effect:hover::before {
-  opacity: 1;
-  animation: sparkleOnButton 0.8s ease-out forwards;
-}
-
-@keyframes sparkleOnButton {
-  0% {
-    left: -50%;
-    opacity: 0;
-  }
-  50% {
-    left: 50%;
-    opacity: 1;
-  }
-  100% {
-    left: 150%;
-    opacity: 0;
-  }
 }
