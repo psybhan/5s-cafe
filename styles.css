@@ -55,27 +55,29 @@ body {
   }
 }
 
-/* Animations for Sections */
-@keyframes fadeInUp {
+/* Text Animation (Rolex-style) */
+@keyframes rolexText {
   0% {
     opacity: 0;
     transform: translateY(20px);
+    letter-spacing: -2px;
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+    letter-spacing: normal;
   }
 }
 
 .animate {
   opacity: 0;
   transform: translateY(20px);
+  letter-spacing: -2px;
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .animate.in-view {
-  opacity: 1;
-  transform: translateY(0);
+  animation: rolexText 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* Header */
@@ -145,6 +147,7 @@ body {
 
 /* Hero Section */
 .hero {
+  position: relative;
   background: url('images/hero-bg.jpg') no-repeat center center/cover;
   height: 100vh;
   display: flex;
@@ -153,7 +156,6 @@ body {
   text-align: center;
   color: #fff;
   padding-top: 80px; /* Offset for fixed header */
-  position: relative;
 }
 
 .hero-content {
@@ -181,6 +183,7 @@ body {
   font-weight: 500;
   border-radius: 5px;
   transition: background 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
 }
 
 .btn:hover {
