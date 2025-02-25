@@ -12,24 +12,23 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Splash Screen (Intro Logo Animation) -->
+  <!-- Splash Screen -->
   <div id="splash">
     <img src="logo.svg.png.jpg" alt="5S Cafe Logo" class="logo-animation" />
   </div>
 
-  <!-- Main Content (Hidden initially) -->
-  <div id="main-content" style="display: none;">
+  <!-- Main Content -->
+  <div id="main-content" style="display:none;">
     <!-- Header & Navigation -->
-    <header class="header animate">
+    <header class="header">
       <div class="container">
-        <!-- Logo as refresh button -->
+        <!-- Logo as Refresh Button -->
         <div class="logo">
           <a href="#" onclick="location.reload(); return false;">
             <img src="logo.svg.png.jpg" alt="5S Cafe Logo" />
           </a>
         </div>
         <nav class="nav">
-          <!-- Horizontally scrollable navigation -->
           <ul>
             <li><a href="#about" class="btn">About</a></li>
             <li><a href="#menu" class="btn">Menu</a></li>
@@ -37,7 +36,6 @@
             <li><a href="#reviews" class="btn">Reviews</a></li>
             <li><a href="#instagram" class="btn">Instagram</a></li>
             <li><a href="#contact" class="btn">Contact</a></li>
-            <!-- Find Us Button -->
             <li><a href="https://g.co/kgs/cQdWVAG" target="_blank" rel="noopener noreferrer" class="btn find-us">Find Us</a></li>
           </ul>
         </nav>
@@ -59,7 +57,7 @@
         <h2>About 5S Cafe</h2>
         <p>
           5S is a Toronto-based cafe founded by Sahar, with over four years of experience in the industry.
-          Together with her son, Sobhan—a seasoned barista and drink specialist—they bring a passion for artisanal beverages, food, and a welcoming atmosphere that feels like home.
+          Together with her son, Sobhan—a seasoned barista and drink specialist—they bring a passion for artisanal beverages, food, and a welcoming atmosphere.
         </p>
         <p>
           Our unique menu features specialty coffee drinks, fresh pastries, baked goods, customized birthday cakes, coffee beans, homemade products, arts for retail, and event hosting.
@@ -102,7 +100,7 @@
       </div>
     </section>
 
-    <!-- Merged Order Section -->
+    <!-- Order Section -->
     <section id="order" class="order animate">
       <div class="container">
         <h2>Order</h2>
@@ -114,7 +112,7 @@
       </div>
     </section>
 
-    <!-- Reviews Section (Elfsight Google Reviews Integration) -->
+    <!-- Reviews Section -->
     <section id="reviews" class="reviews animate">
       <div class="container">
         <h2>Google Reviews</h2>
@@ -180,7 +178,6 @@
   <!-- Splash Screen Script -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      // Show splash for 3 seconds then fade out
       setTimeout(function(){
         const splash = document.getElementById("splash");
         splash.style.transition = "opacity 0.5s ease";
