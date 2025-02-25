@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }, observerOptions);
 
-  // Observe elements with classes "animate" and "gucci-text"
+  // Observe elements with class "animate" and "gucci-text"
   document.querySelectorAll('.animate, .gucci-text').forEach(el => observer.observe(el));
 
   // Splash Screen
