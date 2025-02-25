@@ -215,6 +215,19 @@ form button:hover {
   color: #e65c00;
 }
 
+/* Map Button (in Contact Section) */
+.map-button {
+  margin-top: 20px;
+}
+
+.map-button .btn {
+  background: #333;
+}
+
+.map-button .btn:hover {
+  background: #555;
+}
+
 /* Footer */
 .footer {
   background: #f4f4f4;
