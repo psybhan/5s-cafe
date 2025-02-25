@@ -7,6 +7,8 @@
   <title>5S Cafe - Premium Coffee Experience</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- Using Playfair Display for a luxurious header font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
@@ -17,29 +19,33 @@
     <img src="logo.svg.png.jpg" alt="5S Cafe Logo" class="logo-animation" />
   </div>
 
+  <!-- Sidebar Navigation (Hidden by default) -->
+  <div id="sidebar">
+    <button id="close-btn">&times;</button>
+    <nav class="sidebar-nav">
+      <a href="#about" class="sidebar-link">About</a>
+      <a href="#menu" class="sidebar-link">Menu</a>
+      <a href="#order" class="sidebar-link">Order</a>
+      <a href="#reviews" class="sidebar-link">Reviews</a>
+      <a href="#instagram" class="sidebar-link">Instagram</a>
+      <a href="#contact" class="sidebar-link">Contact</a>
+      <a href="https://g.co/kgs/cQdWVAG" target="_blank" rel="noopener noreferrer" class="sidebar-link">Find Us</a>
+    </nav>
+  </div>
+
   <!-- Main Content -->
   <div id="main-content" style="display:none;">
-    <!-- Header & Navigation -->
+    <!-- Header -->
     <header class="header">
-      <div class="container">
-        <!-- Logo as Refresh Button using "MAMA.jpg" -->
-        <div class="logo">
-          <a href="#" onclick="location.reload(); return false;">
-            <img src="MAMA.jpg" alt="5S Cafe Refresh Logo" />
+      <div class="container header-container">
+        <!-- Brand Title as Refresh Button -->
+        <div class="brand">
+          <a href="#" onclick="location.reload(); return false;" class="brand-link">
+            5S Cafe
           </a>
         </div>
-        <nav class="nav">
-          <ul>
-            <li><a href="#about" class="btn animate">About</a></li>
-            <li><a href="#menu" class="btn animate">Menu</a></li>
-            <li><a href="#order" class="btn animate">Order</a></li>
-            <li><a href="#reviews" class="btn animate">Reviews</a></li>
-            <li><a href="#instagram" class="btn animate">Instagram</a></li>
-            <li><a href="#contact" class="btn animate">Contact</a></li>
-            <!-- Find Us Button -->
-            <li><a href="https://g.co/kgs/cQdWVAG" target="_blank" rel="noopener noreferrer" class="btn find-us animate">Find Us</a></li>
-          </ul>
-        </nav>
+        <!-- Menu Button (Hamburger Icon) -->
+        <button id="menu-btn" class="menu-btn">&#9776;</button>
       </div>
     </header>
 
@@ -52,7 +58,7 @@
       </div>
     </section>
 
-    <!-- About Section with Gucci-style Text Animation -->
+    <!-- About Section -->
     <section id="about" class="about">
       <div class="container">
         <div class="gucci-text">
